@@ -1,0 +1,29 @@
+{
+  "name": "angular-http-loader",
+  "description": "Tool for showing HTTP loaders in AngularJS applications",
+  "ignore": [
+    "app/src",
+    ".bowerrc",
+    ".gitignore",
+    ".jshintrc",
+    "bower.json",
+    "Gruntfile.js",
+    "karma-unit.conf.js",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "main": "app/package/js/angular-http-loader.js",
+  "homepage": "https://github.com/wongatech/angular-http-loader",
+  "version": "0.1.8",
+  "_release": "0.1.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.8",
+    "commit": "b07f28d1cf9d89adfdbe4138cb672d6afa22763d"
+  },
+  "_source": "https://github.com/wongatech/angular-http-loader.git",
+  "_target": "^0.1.8",
+  "_originalSource": "angular-http-loader",
+  "_direct": true
+}

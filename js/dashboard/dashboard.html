@@ -1,0 +1,49 @@
+<div ng-controller="dashboardCtrl">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Git App</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-xs-12">
+                <!--<input date-range-picker class="form-control date-picker" type="text" ng-model="bucket.dateRange" options="dateRangeSelectorOptions" />-->
+
+
+                <button class="btn btn-default date-picker" date-range-picker options="dateRangeSelectorOptions" ng-model="bucket.dateRange">
+
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                    <span> {{bucket.dateRange.startDate|amDateFormat:'LL'}} - {{bucket.dateRange.endDate|amDateFormat:'LL'}} </span>
+                    <span><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                </button>
+            </div>
+
+            </div>
+
+        <br>
+        <br>
+
+        <div class="row">
+            <div class="col col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <h3 class="panel-title text-left col col-xs-6">Ad Requests </h3>
+                            <h5 class="panel-title text-right col col-xs-6">Dated from <i>{{bucket.dateRange.startDate|amDateFormat:'LL'}}</i> to <i>{{bucket.dateRange.endDate|amDateFormat:'LL'}}</i></h5>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <timeseries data="data"></timeseries>
+                        <br>
+                        <div><small style="color: gray;"><i>Note: Drag the chart at the bottom horizontally to zoom in a time range</i></small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
