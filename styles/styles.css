@@ -1,3 +1,11 @@
 .dateSelector{
 
 }
+.chartPlaceHolder{
+    min-height: 550px;
+    display: inline-block;
+}
+.align-middle{
+    vertical-align: middle;
+
+}

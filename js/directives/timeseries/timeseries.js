@@ -17,14 +17,12 @@ angular.module("gitapp")
                         if(newVal !== oldVal) {
                             element.find("div").html('');
                             var data = newVal.map(function (item) {
-                                console.log("?????",item);
                                 return {
                                     date: new Date(item.date),
                                     'Ad Request': item.adrequest
                                 };
                             });
 
-                            console.log("<<<<<>>>>",scope.data);
                             var chart = d3.timeseries()
                                 .addSerie(data, {x: 'date', y: 'Ad Request'}, {
                                     interpolate: 'monotone',
@@ -34,12 +32,7 @@ angular.module("gitapp")
                                 .margin.left(40)
                                 .width(900);
 
-                            console.log(element.find("div")[0]);
-                            console.log(element.find(".timeseries")[0]);
                             chart(element.find("div")[0]);
-
-                            console.log(scope);
-                            console.log(element.children());
                         }
                     })
 
